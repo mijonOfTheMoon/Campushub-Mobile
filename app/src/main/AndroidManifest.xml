@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CampushubMobile">
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MhsHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EoHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
