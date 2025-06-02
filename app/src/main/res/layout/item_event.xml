@@ -1,6 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- Gambar Event -->
+        <ImageView
+            android:id="@+id/imageEvent"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_event_image"
+            android:contentDescription="@string/event_image"
+            android:padding="4dp"
+            android:clipToOutline="true"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Judul Event -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Biomedik Dasar"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="@+id/imageEvent"
+            app:layout_constraintStart_toEndOf="@+id/imageEvent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="8dp" />
+
+        <!-- Tipe Event -->
+        <TextView
+            android:id="@+id/textType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Webinar"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            app:layout_constraintTop_toBottomOf="@+id/textTitle"
+            app:layout_constraintStart_toStartOf="@+id/textTitle"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Tanggal -->
+        <LinearLayout
+            android:id="@+id/layoutDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/textType"
+            app:layout_constraintStart_toStartOf="@+id/textType">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_calendar"
+                android:contentDescription="@string/tanggal_icon"
+                android:tint="#444" />
+
+            <TextView
+                android:id="@+id/textDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 Agustus 2025"
+                android:textSize="13sp"
+                android:layout_marginStart="4dp"
+                android:textColor="#444" />
+        </LinearLayout>
+
+        <!-- Pemateri -->
+        <LinearLayout
+            android:id="@+id/layoutSpeaker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutDate"
+            app:layout_constraintStart_toStartOf="@+id/layoutDate"
+            app:layout_constraintBottom_toTopOf="@+id/buttonDetail">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_person"
+                android:contentDescription="@string/pemateri_icon"
+                android:tint="#444" />
+
+            <TextView
+                android:id="@+id/textSpeaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sandhika Galih"
+                android:textSize="13sp"
+                android:layout_marginStart="4dp"
+                android:textColor="#444" />
+        </LinearLayout>
+
+        <!-- Tombol Lihat Detail -->
+        <Button
+            android:id="@+id/buttonDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Lihat detail"
+            android:backgroundTint="#1E3A8A"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="8dp"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageEvent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
