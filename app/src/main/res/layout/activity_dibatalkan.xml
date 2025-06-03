@@ -253,7 +253,7 @@
                 android:padding="16dp"
                 android:stateListAnimator="@null"
                 android:text="Kamu sudah membatalkan event ini. Silahkan daftar ulang atau cari event lain"
-                android:textAlignment="textStart"
+                android:textAlignment="gravity"
                 android:textAllCaps="true"
                 android:textColor="#E53935"
                 android:textSize="10sp"

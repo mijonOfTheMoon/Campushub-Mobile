@@ -18,7 +18,7 @@
             android:layout_width="100dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/event_placeholder"
+            android:src="@drawable/mahasiswa/event_placeholder"
             android:contentDescription="Gambar Event"
             android:padding="4dp"
             android:clipToOutline="true"
