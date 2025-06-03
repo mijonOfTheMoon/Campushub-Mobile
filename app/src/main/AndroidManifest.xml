@@ -15,10 +15,10 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MhsHomeActivity"
+            android:name=".MhsActivity"
             android:exported="false" />
         <activity
-            android:name=".EoHomeActivity"
+            android:name=".EoActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

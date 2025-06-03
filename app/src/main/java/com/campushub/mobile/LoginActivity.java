@@ -2,6 +2,7 @@ package com.campushub.mobile;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -26,6 +27,11 @@ public class LoginActivity extends AppCompatActivity {
         TextView daftar = findViewById(R.id.daftar);
         daftar.setOnClickListener(v -> {
             startActivity(new Intent(this, RegisterActivity.class));
+        });
+
+        Button login = findViewById(R.id.login_button);
+        login.setOnClickListener(v -> {
+            startActivity(new Intent(this, EoActivity.class));
         });
 
     }
