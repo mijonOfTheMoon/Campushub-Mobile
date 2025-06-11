@@ -157,7 +157,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/ic_home"
-                    android:tint="AEAEAE" />
+                    app:tint="AEAEAE" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -195,7 +195,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/ic_event"
-                    android:tint="#AEAEAE" />
+                    app:tint="#AEAEAE" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -233,7 +233,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/ic_profile"
-                    android:tint="#AEAEAE" />
+                    app:tint="#AEAEAE" />
 
                 <TextView
                     android:layout_width="wrap_content"

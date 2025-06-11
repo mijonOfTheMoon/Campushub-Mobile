@@ -2,36 +2,48 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0B3D91">
 
     <!-- Header -->
-    <TextView
-        android:id="@+id/tvHeader"
+    <LinearLayout
+        android:id="@+id/headerLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kode Presensi"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp">
 
+    </LinearLayout>
+
+    <!-- Background with rounded top -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_white_top"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="90dp" />
+        
     <!-- Ticket Card -->
     <LinearLayout
         android:id="@+id/ticketCard"
         android:layout_width="0dp"
-        android:layout_height="600dp"
+        android:layout_height="550dp"
         android:orientation="vertical"
         android:padding="24dp"
         android:background="@drawable/bg_ticket"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeader"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="120dp"
         android:layout_marginHorizontal="16dp">
 
         <!-- Title -->
@@ -39,22 +51,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Biomedik Dasar"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="Webinar"
-            android:textSize="14sp"
-            android:textColor="#888888"
-            android:layout_marginBottom="16dp"/>
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginVertical="16dp"
+            android:layout_height="2dp"
+            android:layout_marginVertical="12dp"
             android:background="#CCCCCC" />
 
         <!-- Detail Rows -->
@@ -62,43 +74,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="2">
+            android:weightSum="2"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp">
 
             <!-- Left Column -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginEnd="16dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nama"
-                    android:textColor="#888888"
-                    android:textSize="14sp"/>
+                    android:textColor="#5F5A5A"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:text="John Doe"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="8dp"/>
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tanggal"
-                    android:textColor="#888888"
-                    android:textSize="14sp"/>
+                    android:textColor="#5F5A5A"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="15 Agustus 2025"
-                    android:textStyle="bold"
-                    android:textSize="14sp"/>
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <!-- Right Column -->
@@ -106,57 +123,65 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginStart="16dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Lokasi"
-                    android:textColor="#888888"
-                    android:textSize="14sp"/>
+                    android:textColor="#5F5A5A"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:text="Samantha Krida"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="8dp"/>
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Waktu Check-in"
-                    android:textColor="#888888"
-                    android:textSize="14sp"/>
+                    android:textColor="#5F5A5A"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="14:20"
-                    android:textStyle="bold"
-                    android:textSize="14sp"/>
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="45dp"/>
+
         <!-- Kode Presensi Container -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/codeContainer"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/ticketCard"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="24dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="#1A4775"
-                android:padding="16dp"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="4dp"
                 android:gravity="center">
 
                 <!-- Digit boxes -->
@@ -167,63 +192,79 @@
                     android:gravity="center">
 
                     <TextView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                        android:layout_width="60dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="5dp"
                         android:background="@drawable/digit_box"
                         android:gravity="center"
                         android:text="1"
-                        android:textColor="#0B3D91"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginEnd="8dp"/>
+                        android:textColor="#1A4775"
+                        android:textSize="48sp"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                        android:layout_width="60dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="5dp"
                         android:background="@drawable/digit_box"
                         android:gravity="center"
                         android:text="8"
-                        android:textColor="#0B3D91"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginEnd="8dp"/>
+                        android:textColor="#1A4775"
+                        android:textSize="48sp"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                        android:layout_width="60dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="5dp"
                         android:background="@drawable/digit_box"
                         android:gravity="center"
                         android:text="3"
-                        android:textColor="#0B3D91"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginEnd="8dp"/>
+                        android:textColor="#1A4775"
+                        android:textSize="48sp"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                        android:layout_width="60dp"
+                        android:layout_height="80dp"
                         android:background="@drawable/digit_box"
                         android:gravity="center"
                         android:text="5"
-                        android:textColor="#0B3D91"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
+                        android:textColor="#1A4775"
+                        android:textSize="48sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <!-- Keterangan -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tunjukkan kode ini kepada panitia saat acara sebagai bukti pemesanan tiket Anda. Simpan kode dengan baik dan pastikan Anda siap menunjukkannya saat diminta."
+            android:textSize="12sp"
+            android:textColor="#444444"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp"/>
     </LinearLayout>
 
-    <!-- Keterangan -->
     <TextView
-        android:id="@+id/tvKeterangan"
-        android:layout_width="0dp"
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tunjukkan kode ini kepada panitia saat acara sebagai bukti pemesanan tiket Anda. Simpan kode dengan baik dan pastikan Anda siap menunjukkannya saat diminta."
-        android:textSize="12sp"
-        android:textColor="#444444"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/codeContainer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:text="Kode Presensi"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <ImageView
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        android:src="@android:drawable/ic_menu_back"
+        app:tint="#FFFFFF"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="56dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
