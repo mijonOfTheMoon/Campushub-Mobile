@@ -15,8 +15,6 @@
 local.properties
 .externalNativeBuild/
 .cxx/
-*.apk
-*.ap_
 *.aab
 *.dex
 *.class
