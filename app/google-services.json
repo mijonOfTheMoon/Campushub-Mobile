@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "638727252744",
+    "project_id": "campushub-ce91a",
+    "storage_bucket": "campushub-ce91a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638727252744:android:a30a4ceadc6a547c54dabd",
+        "android_client_info": {
+          "package_name": "com.campushub.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638727252744-2vkmin3811j3cs3160hr25p0lcoon0oj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.campushub.mobile",
+            "certificate_hash": "3eb64d85d5cafa71e1b2dd20182db5f239954584"
+          }
+        },
+        {
+          "client_id": "638727252744-flc56dvdbpf1vl6buhsntrl5pva4kpnp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ9odW4cm578QXUyYtT_Ri5cySkFCOhs4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638727252744-flc56dvdbpf1vl6buhsntrl5pva4kpnp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
